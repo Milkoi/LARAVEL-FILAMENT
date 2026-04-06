@@ -11,7 +11,6 @@ class Category extends Model
 
     protected $table = '23810310115_categories';
 
-    // cho phép insert dữ liệu
     protected $fillable = [
         'name',
         'slug',
@@ -19,7 +18,6 @@ class Category extends Model
         'is_visible',
     ];
 
-    // quan hệ: 1 category có nhiều product
     public function products()
     {
         return $this->hasMany(Product::class);
