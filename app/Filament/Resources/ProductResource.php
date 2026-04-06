@@ -44,8 +44,6 @@ class ProductResource extends Resource
                             'out_of_stock' => 'Out of Stock',
                         ])
                         ->required(),
-
-                    // ✅ GIÁ TIỀN (format đẹp khi nhập)
                     Forms\Components\TextInput::make('price')
                     ->label('Giá tiền')
                     ->numeric()
@@ -66,7 +64,7 @@ class ProductResource extends Resource
                         ->integer()
                         ->required(),
 
-                    // ⭐ TRƯỜNG SÁNG TẠO + LOGIC
+                    //TRƯỜNG SÁNG TẠO
                     Forms\Components\TextInput::make('discount_percent')
                     ->label('Giảm giá (%)')
                     ->numeric()
