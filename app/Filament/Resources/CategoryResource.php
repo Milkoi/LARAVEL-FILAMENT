@@ -50,16 +50,16 @@ class CategoryResource extends Resource
 
                 Tables\Columns\IconColumn::make('is_visible')
                     ->boolean(),
-            ])
-            ->filters([
-                Tables\Filters\TernaryFilter::make('is_visible'),
-            ])
-            ->actions([
-                Tables\Actions\EditAction::make(),
-            ])
-            ->bulkActions([
-                Tables\Actions\DeleteBulkAction::make(),
-            ]);
+                ])
+                ->filters([
+                    Tables\Filters\TernaryFilter::make('is_visible'),
+                ])
+                ->actions([
+                    Tables\Actions\EditAction::make(),
+                ])
+                ->bulkActions([
+                    Tables\Actions\DeleteBulkAction::make(),
+                ]);
     }
 
     public static function getPages(): array
