@@ -23,7 +23,7 @@ class Product extends Model
         'discount_percent',
     ];
 
-    // quan hệ: product thuộc về category
+
     public function category()
     {
         return $this->belongsTo(Category::class);
